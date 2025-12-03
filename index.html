@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Berita Lengkap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Panel Pengaturan -->
+<div id="settingsPanel" class="settings-panel">
+    <h3>Pengaturan</h3>
+    <ul>
+        <li onclick="toggleDarkMode()">🌙 Mode Gelap</li>
+        <li>🔔 Notifikasi</li>
+        <li>ℹ Tentang Aplikasi</li>
+    </ul>
+</div>
+
+<!-- Bottom Sheet -->
+<div id="bottomSheet" class="bottom-sheet">
+    <div id="bottomSheetContent"></div>
+    <button class="close-btn" onclick="closeBottomSheet()">Tutup</button>
+</div>
+
+    <!-- Header -->
+    <header>
+        <button class="settings-btn">⚙</button>
+        <h1>Aplikasi Berita</h1>
+    </header>
+
+    <!-- Tombol Berita Panas (Tengah) -->
+    <section class="hot-news">
+        <button id="hotNewsBtn" class="hot-btn">🔥 Berita Panas</button>
+    </section>
+
+    <!-- Pilihan Kategori -->
+    <section class="categories">
+        <h2>Pilih Kategori Berita</h2>
+<div class="category-buttons">
+    <button onclick="loadCategoryWithImage('nasional')">
+        <img src="images/logonasional.png" alt="Nasional" class="btn-icon"> Nasional
+    </button>
+    <button onclick="loadCategoryWithImage('internasional')">
+        <img src="images/internasionallogo.png" alt="Internasional" class="btn-icon"> Internasional
+    </button>
+    <button onclick="loadCategoryWithImage('olahraga')">
+        <img src="images/logoolahraga.png" alt="Olahraga" class="btn-icon"> Olahraga
+    </button>
+    <button onclick="loadCategoryWithImage('teknologi')">
+        <img src="images/logoteknologi.png" alt="Teknologi" class="btn-icon"> Teknologi
+    </button>
+</div>
+
+    </section>
+
+    <!-- Tempat munculnya hasil berita -->
+    <section id="newsContainer" class="news-container">
+        <p>Pilih kategori berita untuk mulai membaca.</p>
+    </section>
+
+    <!-- Footer Menu -->
+    <footer>
+        <button>👤 Profil</button>
+        <button>📋 Menu</button>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
